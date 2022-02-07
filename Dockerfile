@@ -12,7 +12,7 @@ ADD open-xchange.list /etc/apt/sources.list.d/open-xchange.list
 ADD adoptopenjdk.list /etc/apt/sources.list.d/adoptopenjdk.list
 
 RUN wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | apt-key add -
-RUN wget http://software.open-xchange.com/oxbuildkey.pub -O - | apt-key add - && \
+RUN wget https://software.open-xchange.com/0xDFD4BCF6-oxbuildkey.pub -O - | apt-key add - && \
     apt-get update && \
     apt-get install -y \
         vim \
